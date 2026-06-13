@@ -1,0 +1,365 @@
+/* Variables de Color basadas en la imagen y logo corporativos */
+:root {
+    --primary-dark: #000c8f;      /* Azul corporativo oscuro (fondo y botones principales) */
+    --primary-light: #0055ff;     /* Azul eléctrico del logo (acentos y enlaces) */
+    --accent-color: #00d2ff;      /* Azul claro brillante */
+    --dark-neutral: #111625;      /* Fondo ultra oscuro para modo oscuro/contrastes */
+    --light-neutral: #f4f7fc;     /* Gris muy claro para fondos de secciones */
+    --text-dark: #1e2530;         /* Color de texto principal oscuro */
+    --text-muted: #5a6578;        /* Color de texto secundario */
+    --white: #ffffff;
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Tipografía y General */
+body {
+    font-family: 'Outfit', 'Inter', sans-serif;
+    color: var(--text-dark);
+    background-color: var(--white);
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    color: var(--primary-dark);
+}
+
+/* Navbar Personalizado */
+.navbar-custom {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(0, 85, 255, 0.1);
+    transition: var(--transition-smooth);
+}
+
+.navbar-custom .navbar-brand img {
+    height: 65px;
+    object-fit: contain;
+}
+
+.navbar-custom .nav-link {
+    color: var(--text-dark);
+    font-weight: 500;
+    padding: 0.5rem 1.2rem;
+    transition: var(--transition-smooth);
+}
+
+.navbar-custom .nav-link:hover,
+.navbar-custom .nav-link.active {
+    color: var(--primary-light);
+}
+
+/* Botones Premium */
+.btn-primary-custom {
+    background-color: var(--primary-dark);
+    color: var(--white);
+    border: none;
+    font-weight: 600;
+    padding: 0.75rem 1.8rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 12, 143, 0.2);
+    transition: var(--transition-smooth);
+}
+
+.btn-primary-custom:hover {
+    background-color: var(--primary-light);
+    color: var(--white);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 85, 255, 0.3);
+}
+
+.btn-outline-custom {
+    background-color: transparent;
+    color: var(--primary-dark);
+    border: 2px solid var(--primary-dark);
+    font-weight: 600;
+    padding: 0.65rem 1.8rem;
+    border-radius: 8px;
+    transition: var(--transition-smooth);
+}
+
+.btn-outline-custom:hover {
+    background-color: var(--primary-dark);
+    color: var(--white);
+    transform: translateY(-2px);
+}
+
+/* Hero Section */
+.hero-section {
+    background: radial-gradient(circle at 10% 20%, rgba(0, 12, 143, 0.05) 0%, rgba(0, 85, 255, 0.02) 90%);
+    padding: 8rem 0 6rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: -10%;
+    right: -10%;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(0, 85, 255, 0.08) 0%, transparent 70%);
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.hero-badge {
+    background-color: rgba(0, 85, 255, 0.1);
+    color: var(--primary-light);
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 0.4rem 1rem;
+    border-radius: 50px;
+    display: inline-block;
+    margin-bottom: 1.5rem;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+
+.hero-title span {
+    color: var(--primary-light);
+}
+
+/* Tarjetas y Características */
+.section-title {
+    position: relative;
+    padding-bottom: 1rem;
+    margin-bottom: 3rem;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background-color: var(--primary-light);
+    border-radius: 2px;
+}
+
+.feature-card {
+    background: var(--white);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 16px;
+    padding: 2.5rem 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+    transition: var(--transition-smooth);
+    height: 100%;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 85, 255, 0.08);
+    border-color: rgba(0, 85, 255, 0.15);
+}
+
+.feature-icon-wrapper {
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    background-color: rgba(0, 12, 143, 0.05);
+    color: var(--primary-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    transition: var(--transition-smooth);
+}
+
+.feature-card:hover .feature-icon-wrapper {
+    background-color: var(--primary-light);
+    color: var(--white);
+}
+
+/* DIAN API Integration Section */
+.dian-section {
+    background-color: var(--dark-neutral);
+    color: var(--white);
+    padding: 6rem 0;
+    position: relative;
+}
+
+.dian-section h2, .dian-section h3, .dian-section h4 {
+    color: var(--white);
+}
+
+.dian-badge {
+    background-color: #ffc107;
+    color: #000;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.25rem 0.6rem;
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+
+.code-window {
+    background-color: #090d16;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+    overflow: hidden;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.code-header {
+    background-color: #141b2d;
+    padding: 0.75rem 1rem;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 6px;
+    display: inline-block;
+}
+.dot-red { background-color: #ff5f56; }
+.dot-yellow { background-color: #ffbd2e; }
+.dot-green { background-color: #27c93f; }
+
+.code-body {
+    padding: 1.5rem;
+    font-size: 0.9rem;
+    overflow-x: auto;
+}
+
+/* Planes y Precios */
+.pricing-section {
+    background-color: var(--light-neutral);
+    padding: 6rem 0;
+}
+
+.pricing-card {
+    background-color: var(--white);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 20px;
+    padding: 3rem 2rem;
+    position: relative;
+    overflow: hidden;
+    transition: var(--transition-smooth);
+}
+
+.pricing-card.popular {
+    border: 2px solid var(--primary-light);
+    box-shadow: 0 15px 35px rgba(0, 85, 255, 0.1);
+    transform: scale(1.05);
+}
+
+.popular-badge {
+    position: absolute;
+    top: 20px;
+    right: -35px;
+    background-color: var(--primary-light);
+    color: var(--white);
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.25rem 3rem;
+    transform: rotate(45deg);
+}
+
+.pricing-card:hover:not(.popular) {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.price {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--primary-dark);
+}
+
+.price span {
+    font-size: 1rem;
+    color: var(--text-muted);
+    font-weight: 400;
+}
+
+/* Formulario de Contacto / Registro */
+.contact-section {
+    padding: 6rem 0;
+}
+
+.form-control-custom {
+    background-color: var(--light-neutral);
+    border: 1px solid transparent;
+    padding: 0.85rem 1.2rem;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    transition: var(--transition-smooth);
+}
+
+.form-control-custom:focus {
+    background-color: var(--white);
+    border-color: var(--primary-light);
+    box-shadow: 0 0 0 4px rgba(0, 85, 255, 0.15);
+    outline: none;
+}
+
+/* Footer */
+.footer-section {
+    background-color: var(--dark-neutral);
+    color: rgba(255,255,255,0.7);
+    padding: 4rem 0 2rem 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer-section h5 {
+    color: var(--white);
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.footer-link {
+    color: rgba(255,255,255,0.7);
+    text-decoration: none;
+    transition: var(--transition-smooth);
+    display: inline-block;
+    margin-bottom: 0.75rem;
+}
+
+.footer-link:hover {
+    color: var(--accent-color);
+    transform: translateX(3px);
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(255,255,255,0.05);
+    color: var(--white);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0.5rem;
+    transition: var(--transition-smooth);
+    text-decoration: none;
+}
+
+.social-icon:hover {
+    background-color: var(--primary-light);
+    color: var(--white);
+}
+
+/* Adaptabilidad Responsiva */
+@media (max-width: 991.98px) {
+    .hero-title {
+        font-size: 2.8rem;
+    }
+    .pricing-card.popular {
+        transform: scale(1);
+        margin: 1.5rem 0;
+    }
+}
