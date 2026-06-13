@@ -110,6 +110,7 @@ body {
     margin-bottom: 20px;
     background: linear-gradient(to right, #ffffff, #e2e8f0);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
