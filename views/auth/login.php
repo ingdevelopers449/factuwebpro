@@ -89,7 +89,7 @@
                     <label class="checkbox-custom-label">
                         <input type="checkbox" class="checkbox-custom"> Recordarme
                     </label>
-                    <a href="#" class="forgot-link">¿Olvidaste tu contraseña?</a>
+                    <a href="forgot-password.php" class="forgot-link">¿Olvidaste tu contraseña?</a>
                 </div>
                 
                 <!-- Botón Enviar -->
