@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="FactuWeb PRO - Solución robusta de Facturación Electrónica en Colombia. Cumple con la DIAN de forma ágil, segura y eficiente.">
     <title>FactuWeb PRO - Facturación Electrónica Oficial DIAN</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../img/icon.png" type="image/png">
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
