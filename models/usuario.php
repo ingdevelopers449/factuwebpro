@@ -9,15 +9,14 @@ class Usuario {
         $this->conn = $conn;
     }
 
-    public function registrar($usuario, $email, $password, $id_rol = 3) {
+    public function registrar($nombre, $email, $password, $id_rol = 1) {
         $hashed_password = password_hash($password, PASSWORD_BCRYPT);
-        $fecha_creacion = date("Y-m-d H:i:s");
         
-        $query = "INSERT INTO usuarios (usuario, email, password, id_rol, fecha_creacion) VALUES (?, ?, ?, ?, ?)";
+        $query = "INSERT INTO usuarios (nombre, email, password_hash, id_rol) VALUES (?, ?, ?, ?)";
         
         $stmt = $this->conn->prepare($query);
         if ($stmt) {
-            $stmt->bind_param("sssis", $usuario, $email, $hashed_password, $id_rol, $fecha_creacion);
+            $stmt->bind_param("sssi", $nombre, $email, $hashed_password, $id_rol);
             $result = $stmt->execute();
             $stmt->close();
             return $result;

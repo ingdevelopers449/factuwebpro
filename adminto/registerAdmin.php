@@ -29,7 +29,7 @@
                 <p class="form-subtitle">Crea el usuario administrador inicial para gestionar FactuWeb PRO.</p>
             </div>
 
-            <form action="" method="POST">
+            <form action="controller/registerAdminController.php" method="POST">
                 <!-- Campo Nombre -->
                 <div class="form-group-custom">
                     <label class="form-label-custom" for="nombre">Nombre Completo</label>
