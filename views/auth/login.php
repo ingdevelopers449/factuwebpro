@@ -11,64 +11,88 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&family=Roboto+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
     
-    <!-- Custom CSS (Separado) -->
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="../../public/css/auth.css">
 </head>
 <body>
 
     <div class="auth-container">
-        <div class="row g-0 m-0 w-100 h-100">
-            <!-- Columna Izquierda (Logo / Emblema) -->
-            <div class="col-md-6 brand-panel d-none d-md-flex">
-                <div class="emblem-container">
-                    <img src="../../img/logo.png" alt="FactuWeb PRO Emblem">
+        <!-- Columna Izquierda (Panel de Marca Corporativo) -->
+        <div class="col-lg-6 brand-panel d-none d-lg-flex">
+            <div class="brand-content">
+                <div class="brand-top">
+                    <img src="../../img/logo.png" alt="FactuWeb PRO" class="brand-logo-img">
                 </div>
+                
+                <div class="brand-middle">
+                    <h2 class="brand-title">Facturación electrónica moderna, ágil y segura.</h2>
+                    <ul class="feature-list">
+                        <li class="feature-item">
+                            <div class="feature-icon-box">
+                                <i class="fa-solid fa-bolt"></i>
+                            </div>
+                            <span>Emisión y transmisión DIAN en tiempo real.</span>
+                        </li>
+                        <li class="feature-item">
+                            <div class="feature-icon-box">
+                                <i class="fa-solid fa-shield-halved"></i>
+                            </div>
+                            <span>Firma digital y almacenamiento seguro de XML.</span>
+                        </li>
+                        <li class="feature-item">
+                            <div class="feature-icon-box">
+                                <i class="fa-solid fa-chart-pie"></i>
+                            </div>
+                            <span>Reportes financieros y control de documentos.</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="brand-bottom">
+                    <p class="mb-0">&copy; 2026 FactuWeb PRO. Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Columna Derecha (Formulario de Login) -->
+        <div class="col-lg-6 col-md-12 form-panel">
+            <div class="form-header">
+                <h1 class="form-title">Bienvenido de nuevo</h1>
+                <p class="form-subtitle">Ingresa tus credenciales de administrador para continuar.</p>
             </div>
             
-            <!-- Columna Derecha (Formulario) -->
-            <div class="col-md-6 form-panel">
-                <div class="logo-header">
-                    <img src="../../img/logo.png" alt="FactuWeb PRO Logo">
+            <form action="#" method="POST">
+                <!-- Campo Correo -->
+                <div class="form-group-custom">
+                    <label class="form-label-custom" for="email">Correo Electrónico</label>
+                    <div class="input-group-custom">
+                        <input type="email" id="email" class="form-control-custom" placeholder="correo@ejemplo.com" required autocomplete="username">
+                        <span class="input-icon"><i class="fa-regular fa-envelope"></i></span>
+                    </div>
                 </div>
                 
-                <form action="#" method="POST">
-                    <!-- Campo Correo -->
-                    <div class="form-group-custom">
-                        <label class="form-label-custom" for="email">Correo Electrónico</label>
-                        <div class="input-group-custom">
-                            <span class="input-icon"><i class="fa-regular fa-envelope"></i></span>
-                            <input type="email" id="email" class="form-control-custom" placeholder="nombre@empresa.com" required>
-                        </div>
+                <!-- Campo Contraseña -->
+                <div class="form-group-custom">
+                    <label class="form-label-custom" for="password">Contraseña</label>
+                    <div class="input-group-custom">
+                        <input type="password" id="password" class="form-control-custom" placeholder="••••••••" required autocomplete="current-password">
+                        <span class="input-icon"><i class="fa-solid fa-lock"></i></span>
                     </div>
-                    
-                    <!-- Campo Contraseña -->
-                    <div class="form-group-custom">
-                        <label class="form-label-custom" for="password">Contraseña</label>
-                        <div class="input-group-custom">
-                            <span class="input-icon"><i class="fa-solid fa-lock"></i></span>
-                            <input type="password" id="password" class="form-control-custom" placeholder="..........." required>
-                        </div>
-                    </div>
-                    
-                    <!-- Recordarme y Recuperación -->
-                    <div class="options-row">
-                        <label class="checkbox-custom-label">
-                            <input type="checkbox" class="checkbox-custom"> Recordarme
-                        </label>
-                        <a href="#" class="forgot-link">¿Olvidaste tu contraseña?</a>
-                    </div>
-                    
-                    <!-- Botón Enviar -->
-                    <button type="submit" class="btn-submit-custom">Iniciar Sesión</button>
-                </form>
-                
-                <!-- Redirección a Registro -->
-                <div class="register-redirect">
-                    ¿No tienes cuenta? <a href="register.php">Regístrate gratis</a>
                 </div>
-            </div>
+                
+                <!-- Recordarme y Recuperación -->
+                <div class="options-row">
+                    <label class="checkbox-custom-label">
+                        <input type="checkbox" class="checkbox-custom"> Recordarme
+                    </label>
+                    <a href="#" class="forgot-link">¿Olvidaste tu contraseña?</a>
+                </div>
+                
+                <!-- Botón Enviar -->
+                <button type="submit" class="btn-submit-custom">Iniciar Sesión</button>
+            </form>
         </div>
     </div>
 

@@ -1,153 +1,204 @@
-/* Estilos Compartidos Premium para Páginas de Autenticación (Login & Registro) */
+/* Estilos Premium Rediseñados para Autenticación (Login) */
 
 :root {
-    --primary-dark: #000c8f;      /* Azul corporativo oscuro */
-    --primary-light: #0055ff;     /* Azul eléctrico */
-    --accent-color: #00d2ff;      /* Azul claro brillante */
+    --primary: #4f46e5;           /* Indigo moderno */
+    --primary-hover: #4338ca;     /* Indigo oscuro */
+    --secondary: #0ea5e9;         /* Sky blue para acentos */
+    --dark: #0f172a;              /* Slate oscuro */
+    --light-bg: #f8fafc;          /* Slate muy claro */
+    --border-color: #e2e8f0;      /* Color de borde suave */
+    --text-main: #334155;         /* Color de texto principal */
+    --text-muted: #64748b;        /* Color de texto atenuado */
     --white: #ffffff;
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --shadow-premium: 0 25px 50px -12px rgba(15, 23, 42, 0.08);
 }
 
 body {
-    background: radial-gradient(circle at 10% 20%, rgba(0, 12, 143, 0.06) 0%, rgba(0, 85, 255, 0.03) 90%), #f4f7fc;
+    background: radial-gradient(circle at top left, rgba(79, 70, 229, 0.08) 0%, transparent 40%),
+                radial-gradient(circle at bottom right, rgba(14, 165, 233, 0.08) 0%, transparent 40%),
+                #f1f5f9;
     font-family: 'Inter', sans-serif;
     min-height: 100vh;
     display: flex;  
     align-items: center;
     justify-content: center;
     padding: 20px;
+    margin: 0;
 }
 
 .auth-container {
-    background: #ffffff;
-    border-radius: 24px;
-    box-shadow: 0 20px 50px rgba(0, 12, 143, 0.08);
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 28px;
+    box-shadow: var(--shadow-premium);
     overflow: hidden;
     width: 100%;
-    max-width: 1000px;
-    min-height: 600px;
-    border: 1px solid rgba(0, 85, 255, 0.05);
+    max-width: 1050px;
+    min-height: 620px;
+    border: 1px solid rgba(255, 255, 255, 0.6);
     display: flex;
 }
 
-/* Panel Izquierdo */
+/* Panel Izquierdo (Diseño Corporativo Hermoso) */
 .brand-panel {
-    background: linear-gradient(135deg, #00087a 0%, #001fcc 100%);
+    background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #312e81 100%);
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
     position: relative;
-    padding: 40px;
+    padding: 50px;
     overflow: hidden;
+    color: var(--white);
 }
 
-/* Decorative circles */
+/* Decoraciones de fondo modernas */
 .brand-panel::before {
     content: '';
     position: absolute;
-    top: -10%;
-    left: -10%;
-    width: 300px;
-    height: 300px;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.06) 0%, transparent 70%);
+    top: -20%;
+    right: -20%;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(99, 102, 241, 0.15) 0%, transparent 70%);
     border-radius: 50%;
+    filter: blur(30px);
 }
 
 .brand-panel::after {
     content: '';
     position: absolute;
     bottom: -10%;
-    right: -10%;
-    width: 250px;
-    height: 250px;
-    background: radial-gradient(circle, rgba(0, 210, 255, 0.1) 0%, transparent 70%);
+    left: -10%;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(14, 165, 233, 0.15) 0%, transparent 70%);
     border-radius: 50%;
+    filter: blur(20px);
 }
 
-/* Contenedor del Emblema (Globo del logo) */
-.emblem-container {
-    width: 250px;
-    height: 250px;
-    overflow: hidden;
+.brand-content {
+    position: relative;
+    z-index: 10;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.brand-top {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    background: rgba(255, 255, 255, 0.03);
-    backdrop-filter: blur(5px);
-    border-radius: 50%;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-    position: relative;
-    z-index: 2;
-    animation: floatAnimation 6s ease-in-out infinite;
 }
 
-@keyframes floatAnimation {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(-10px); }
-    100% { transform: translateY(0px); }
-}
-
-.emblem-container img {
-    height: 90%;
-    width: auto;
+.brand-logo-img {
+    height: 50px;
     object-fit: contain;
-    object-position: left center;
-    transform: scale(1.6) translateX(8px);
-    transform-origin: left center;
 }
 
-/* Panel Derecho */
+.brand-middle {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.brand-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    background: linear-gradient(to right, #ffffff, #e2e8f0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 18px;
+    font-size: 1rem;
+    color: #cbd5e1;
+}
+
+.feature-icon-box {
+    width: 38px;
+    height: 38px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--secondary);
+    font-size: 1.1rem;
+    transition: var(--transition-smooth);
+}
+
+.feature-item:hover .feature-icon-box {
+    background: rgba(255, 255, 255, 0.12);
+    transform: scale(1.1);
+    color: var(--white);
+}
+
+.brand-bottom {
+    font-size: 0.85rem;
+    color: #94a3b8;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+}
+
+/* Panel Derecho (Formulario de Login) */
 .form-panel {
-    padding: 60px 60px;
+    padding: 60px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    background: var(--white);
 }
 
-/* Encabezados de Formulario */
-.logo-header {
-    text-align: center;
-    margin-bottom: 30px;
+.form-header {
+    margin-bottom: 35px;
 }
 
-.logo-header img {
-    max-height: 55px;
-    object-fit: contain;
-}
-
-.header-title {
+.form-title {
     font-family: 'Outfit', sans-serif;
-    font-size: 1.8rem;
+    font-size: 1.85rem;
     font-weight: 700;
-    color: var(--primary-dark);
-    margin-bottom: 6px;
+    color: var(--dark);
+    margin-bottom: 8px;
 }
 
-.header-subtitle {
+.form-subtitle {
     font-size: 0.95rem;
-    color: #5a6578;
-    margin-bottom: 30px;
+    color: var(--text-muted);
 }
 
-/* Campos de Formulario Premium */
+/* Campos de Entrada Premium */
 .form-group-custom {
-    margin-bottom: 20px;
+    margin-bottom: 22px;
 }
 
 .form-label-custom {
     font-family: 'Outfit', sans-serif;
     font-size: 0.85rem;
     font-weight: 600;
-    color: #1e2530;
-    text-transform: uppercase;
+    color: var(--text-main);
     margin-bottom: 8px;
     display: block;
-    letter-spacing: 0.5px;
 }
 
 .input-group-custom {
     position: relative;
+    border-radius: 12px;
+    transition: var(--transition-smooth);
 }
 
 .input-icon {
@@ -155,51 +206,52 @@ body {
     left: 16px;
     top: 50%;
     transform: translateY(-50%);
-    color: var(--primary-light);
-    font-size: 0.95rem;
+    color: var(--text-muted);
+    font-size: 1rem;
     z-index: 5;
-    opacity: 0.7;
+    transition: var(--transition-smooth);
 }
 
 .form-control-custom {
-    background-color: #f8fafc;
-    border: 1px solid rgba(0, 85, 255, 0.15);
-    border-radius: 8px;
-    color: #1e2530;
+    background-color: var(--light-bg);
+    border: 1.5px solid var(--border-color);
+    border-radius: 12px;
+    color: var(--dark);
     font-family: 'Inter', sans-serif;
     font-size: 0.95rem;
-    padding: 12px 16px;
+    padding: 14px 16px 14px 46px;
     width: 100%;
     transition: var(--transition-smooth);
 }
 
-.input-group-custom .form-control-custom {
-    padding-left: 44px;
-}
-
 .form-control-custom:focus {
     background-color: var(--white);
-    border-color: var(--primary-light);
-    box-shadow: 0 0 0 4px rgba(0, 85, 255, 0.1);
+    border-color: var(--primary);
+    box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.1);
     outline: none;
 }
 
-.form-control-custom::placeholder {
-    color: #a0aec0;
+.form-control-custom:focus + .input-icon,
+.input-group-custom:focus-within .input-icon {
+    color: var(--primary);
 }
 
-/* Checkbox y Enlaces */
+.form-control-custom::placeholder {
+    color: #94a3b8;
+}
+
+/* Opciones de Recordar y Olvido */
 .options-row {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 15px;
-    margin-bottom: 25px;
-    font-size: 0.85rem;
+    margin-bottom: 30px;
+    font-size: 0.88rem;
 }
 
 .checkbox-custom-label {
-    color: #1e2530;
+    color: var(--text-main);
     cursor: pointer;
     user-select: none;
     display: flex;
@@ -209,29 +261,31 @@ body {
 }
 
 .checkbox-custom {
-    accent-color: var(--primary-light);
-    width: 16px;
-    height: 16px;
-    border-radius: 4px;
-    border: 1px solid rgba(0, 85, 255, 0.2);
+    accent-color: var(--primary);
+    width: 18px;
+    height: 18px;
+    border-radius: 6px;
+    border: 1.5px solid var(--border-color);
+    cursor: pointer;
 }
 
 .forgot-link {
-    color: var(--primary-light);
+    color: var(--primary);
     text-decoration: none;
     font-weight: 600;
     transition: var(--transition-smooth);
 }
 
 .forgot-link:hover {
-    color: var(--primary-dark);
+    color: var(--primary-hover);
+    text-decoration: underline;
 }
 
-/* Botón de Acción Principal */
+/* Botón de Enviar Moderno */
 .btn-submit-custom {
-    background-color: var(--primary-dark);
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-hover) 100%);
     border: none;
-    border-radius: 8px;
+    border-radius: 12px;
     color: var(--white);
     font-family: 'Outfit', sans-serif;
     font-size: 1.05rem;
@@ -239,44 +293,30 @@ body {
     padding: 14px;
     width: 100%;
     transition: var(--transition-smooth);
-    box-shadow: 0 4px 15px rgba(0, 12, 143, 0.15);
+    box-shadow: 0 10px 20px -10px rgba(79, 70, 229, 0.4);
+    cursor: pointer;
 }
 
 .btn-submit-custom:hover {
-    background-color: var(--primary-light);
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(0, 85, 255, 0.25);
+    transform: translateY(-1px);
+    box-shadow: 0 12px 24px -8px rgba(79, 70, 229, 0.5);
+    filter: brightness(1.05);
 }
 
-/* Enlaces de Redirección */
-.register-redirect,
-.login-redirect {
-    font-size: 0.9rem;
-    color: #5a6578;
-    text-align: center;
-    margin-top: 30px;
+.btn-submit-custom:active {
+    transform: translateY(1px);
 }
 
-.register-redirect a,
-.login-redirect a {
-    color: var(--primary-light);
-    text-decoration: none;
-    font-weight: 700;
-    transition: var(--transition-smooth);
-}
-
-.register-redirect a:hover,
-.login-redirect a:hover {
-    color: var(--primary-dark);
-    text-decoration: underline;
-}
-
-/* Adaptabilidad Responsiva */
-@media (max-width: 767.98px) {
+/* Responsividad */
+@media (max-width: 991.98px) {
+    .auth-container {
+        max-width: 550px;
+    }
     .brand-panel {
-        display: none;
+        display: none !important;
     }
     .form-panel {
-        padding: 40px 30px;
+        width: 100%;
+        padding: 45px 35px;
     }
 }

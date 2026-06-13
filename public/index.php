@@ -43,10 +43,7 @@
                         <a class="nav-link" href="#como-funciona">Cómo Funciona</a>
                     </li>
                     <li class="nav-item ms-lg-3">
-                        <a class="btn btn-outline-custom" href="../views/auth/login.php">Acceder</a>
-                    </li>
-                    <li class="nav-item ms-lg-2">
-                        <a class="btn btn-primary-custom" href="../views/auth/register.php">Registrarse</a>
+                        <a class="btn btn-primary-custom" href="../views/auth/login.php">Acceder</a>
                     </li>
                 </ul>
             </div>
@@ -64,7 +61,7 @@
                         La solución ágil y segura para emitir tus facturas, nómina y documentos soporte en Colombia. Cumple con toda la normatividad legal de forma automática y organizada.
                     </p>
                     <div class="d-flex flex-wrap gap-3">
-                        <a href="../views/auth/register.php" class="btn btn-primary-custom btn-lg">Crear Cuenta</a>
+                        <a href="../views/auth/login.php" class="btn btn-primary-custom btn-lg">Ingresar al Sistema</a>
                         <a href="#caracteristicas" class="btn btn-outline-custom btn-lg">Explorar Módulos</a>
                     </div>
                 </div>
