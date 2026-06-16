@@ -9,21 +9,6 @@ class Usuario {
         $this->conn = $conn;
     }
 
-    public function registrar($nombre, $email, $password, $id_rol = 1) {
-        $hashed_password = password_hash($password, PASSWORD_BCRYPT);
-        
-        $query = "INSERT INTO usuarios (nombre, email, password_hash, id_rol) VALUES (?, ?, ?, ?)";
-        
-        $stmt = $this->conn->prepare($query);
-        if ($stmt) {
-            $stmt->bind_param("sssi", $nombre, $email, $hashed_password, $id_rol);
-            $result = $stmt->execute();
-            $stmt->close();
-            return $result;
-        }
-        return false;
-    }
-
     public function obtenerPorEmail($email) {
     // 1. Definimos la consulta con el marcador '?'
     $sql = "SELECT * FROM usuarios WHERE email = ? LIMIT 1";
