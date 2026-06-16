@@ -65,12 +65,12 @@
                 <p class="form-subtitle">Ingresa tus credenciales de administrador para continuar.</p>
             </div>
             
-            <form action="#" method="POST">
+            <form action="../../controllers/auth/authController.php" method="POST">
                 <!-- Campo Correo -->
                 <div class="form-group-custom">
                     <label class="form-label-custom" for="email">Correo Electrónico</label>
                     <div class="input-group-custom">
-                        <input type="email" id="email" class="form-control-custom" placeholder="correo@ejemplo.com" required autocomplete="username">
+                        <input type="email" id="email" name="email" class="form-control-custom" placeholder="correo@ejemplo.com" required autocomplete="username">
                         <span class="input-icon"><i class="fa-regular fa-envelope"></i></span>
                     </div>
                 </div>
@@ -79,7 +79,7 @@
                 <div class="form-group-custom">
                     <label class="form-label-custom" for="password">Contraseña</label>
                     <div class="input-group-custom">
-                        <input type="password" id="password" class="form-control-custom" placeholder="••••••••" required autocomplete="current-password">
+                        <input type="password" id="password" name="password" class="form-control-custom" placeholder="••••••••" required autocomplete="current-password">
                         <span class="input-icon"><i class="fa-solid fa-lock"></i></span>
                     </div>
                 </div>

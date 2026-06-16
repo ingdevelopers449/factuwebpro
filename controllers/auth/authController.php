@@ -2,7 +2,7 @@
 session_start();
 
 require_once __DIR__ . '/../../config/database.php';
-require_once __DIR__ . '/../../models/Usuario.php';
+require_once __DIR__ . '/../../models/usuario.php';
 
 class AuthController
 {
@@ -14,7 +14,7 @@ class AuthController
         }
 
         $email = trim($_POST['email'] ?? '');
-        $password = trim($_POST['password_hash'] ?? '');
+        $password = trim($_POST['password'] ?? '');
 
         if (empty($email) || empty($password)) {
             $_SESSION['alert'] = [
@@ -65,7 +65,7 @@ class AuthController
             'id_usuario' => $usuario['id_usuario'],
             'nombre' => $usuario['nombre'],
             'email' => $usuario['email'],
-            'id_rol' => $usuario['id_rol']
+            'id_rol' => $usuario['id_rol'],
             'estado' => $usuario['estado']
         ];
 
